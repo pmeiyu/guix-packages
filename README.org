@@ -1,0 +1,14 @@
+#+TITLE: My Collection of Guix Packages
+#+Author: Peng Mei Yu
+#+Copyright: 2018-2020 Peng Mei Yu
+#+License: GPLv3
+
+* Packages
+
+  - linux-nonfree
+
+    The mainline linux kernel.
+
+  - linux-firmware-nonfree
+
+    Non-free firmware for linux.

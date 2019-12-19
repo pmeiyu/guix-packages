@@ -28,7 +28,7 @@
 (define-public linux-firmware-nonfree
   (package
     (name "linux-firmware-nonfree")
-    (version "20190923")
+    (version "20191215")
     (source
      (origin
        (method git-fetch)
@@ -38,7 +38,7 @@
              (commit version)))
        (file-name (git-file-name name version))
        (sha256
-        (base32 "1gq55ny6lb2nh6rr1w55bslzysyj0bwdl6rbpv882hhyjrnsma0n"))))
+        (base32 "01zwmgva2263ksssqhhi46jh5kzb6z1a4xs8agsb2mbwifxf84cl"))))
     (build-system trivial-build-system)
     (arguments
      `(#:modules ((guix build utils))

@@ -16,9 +16,9 @@
     (source
      (origin
        (method url-fetch)
-       (uri (string-append "https://www.kernel.org/pub/linux/kernel/v"
-                           (version-major version) ".x/linux-" version
-                           ".tar.xz"))
+       (uri (string-append "mirror://kernel.org"
+                           "/linux/kernel/v" (version-major version) ".x/"
+                           "linux-" version ".tar.xz"))
        (sha256
         (base32 "1h1ynb51gd4kiakqlkcc7vny45j2snbg4j985qf171mszckrz3jn"))))
     (home-page "https://www.kernel.org/")

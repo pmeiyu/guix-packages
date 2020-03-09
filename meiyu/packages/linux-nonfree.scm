@@ -1,6 +1,6 @@
 (define-module (meiyu packages linux-nonfree)
   #:use-module (gnu packages linux)
-  #:use-module (guix build-system trivial)
+  #:use-module (guix build-system copy)
   #:use-module (guix download)
   #:use-module (guix git-download)
   #:use-module (guix packages)
@@ -39,16 +39,12 @@
        (file-name (git-file-name name version))
        (sha256
         (base32 "01zwmgva2263ksssqhhi46jh5kzb6z1a4xs8agsb2mbwifxf84cl"))))
-    (build-system trivial-build-system)
+    (build-system copy-build-system)
     (arguments
-     `(#:modules ((guix build utils))
-       #:builder (begin
-                   (use-modules (guix build utils))
-                   (let* ((source (assoc-ref %build-inputs "source"))
-                          (out (assoc-ref %outputs "out"))
-                          (firmware (string-append out "/lib/firmware")))
-                     (mkdir-p firmware)
-                     (copy-recursively source firmware)))))
+     `(#:install-plan '(("./" "lib/firmware/"))
+       #:phases (modify-phases %standard-phases
+                  (delete 'strip)
+                  (delete 'validate-runpath))))
     (home-page "https://kernel.org/")
     (synopsis "Non-free Linux firmware")
     (description "Non-free firmware blobs for Linux kernel.")

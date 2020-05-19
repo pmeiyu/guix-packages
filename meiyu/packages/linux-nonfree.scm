@@ -28,7 +28,7 @@
 (define-public linux-firmware-nonfree
   (package
     (name "linux-firmware-nonfree")
-    (version "20191215")
+    (version "20200421")
     (source
      (origin
        (method git-fetch)
@@ -38,7 +38,7 @@
              (commit version)))
        (file-name (git-file-name name version))
        (sha256
-        (base32 "01zwmgva2263ksssqhhi46jh5kzb6z1a4xs8agsb2mbwifxf84cl"))))
+        (base32 "13q3gnh2cmf91qg8qrdhxah6d1j8cc1g587lz712ryxx54w06rk8"))))
     (build-system copy-build-system)
     (arguments
      `(#:install-plan '(("./" "lib/firmware/"))

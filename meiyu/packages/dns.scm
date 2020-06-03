@@ -11,7 +11,7 @@
 (define-public dnscrypt-proxy
   (package
     (name "dnscrypt-proxy")
-    (version "2.0.29")
+    (version "2.0.42")
     (source (origin
               (method git-fetch)
               (uri (git-reference
@@ -20,7 +20,7 @@
               (file-name (git-file-name name version))
               (sha256
                (base32
-                "196yc34xw6h9qpns4n1fw8bjh8lv4xcsbx89i391qw92h2a3qkmc"))))
+                "1v4n0pkwcilxm4mnj4fsd4gf8pficjj40jnmfkiwl7ngznjxwkyw"))))
     (build-system go-build-system)
     (arguments
      `(#:import-path "github.com/jedisct1/dnscrypt-proxy/dnscrypt-proxy"

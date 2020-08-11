@@ -12,7 +12,7 @@
   (package
     (inherit linux-libre)
     (name "linux-nonfree")
-    (version "5.7.2")
+    (version "5.8")
     (source
      (origin
        (method url-fetch)
@@ -20,7 +20,7 @@
                            "/linux/kernel/v" (version-major version) ".x/"
                            "linux-" version ".tar.xz"))
        (sha256
-        (base32 "02brxm78n0kg4mh48acvjsr7mpvaqd279ycyaixaflid1s1awrb0"))))
+        (base32 "1xgibkwb1yfl6qdlbxyagai0qc1pk5ark7giz1512hh6ma353xz7"))))
     (home-page "https://www.kernel.org/")
     (synopsis "Linux kernel")
     (description "The Linux kernel.")))
